@@ -1,6 +1,7 @@
 package com.exception.controllers;
 
 import com.exception.exception.CustomizeException;
+import com.exception.exception.ErrorList;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -13,6 +14,6 @@ public class IndexController {
     }
     @RequestMapping("/test")
     public String test(){
-        throw  new CustomizeException("我是自定义的异常类");
+        throw  new CustomizeException( ErrorList.PASSWORD_ERROR.getMessage(),ErrorList.USERNAME_ERROR.getCode());
     }
 }

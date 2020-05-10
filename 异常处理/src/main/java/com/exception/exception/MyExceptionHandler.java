@@ -11,15 +11,14 @@ import javax.servlet.http.HttpServletResponse;
 @ControllerAdvice
 public class MyExceptionHandler {
 
-
         /*异常的全局处理类*/
     @ExceptionHandler(value = Exception.class)
         ModelAndView  handleException(Throwable e, Model model, HttpServletRequest request, HttpServletResponse response ){
             /*如果得到的异常是自己定义的异常类*/
             if (e instanceof  CustomizeException){
                 /*获取异常信息数据*/
-                String message = e.getMessage();
-                model.addAttribute("message",message);
+                model.addAttribute("message",e.getMessage());
+                model.addAttribute("code",((CustomizeException) e).getCode());
             }else {
                 /*如果不是自定义的异常类*/
                 model.addAttribute("message","服务器累啦");
@@ -28,8 +27,6 @@ public class MyExceptionHandler {
             }
             return  new ModelAndView("error");
         }
-
-
 
 
 }
