@@ -1,8 +1,5 @@
 package com.exception.exception;
 
-import lombok.Data;
-
-
 public enum ErrorList {
 
     PASSWORD_ERROR("密码错误",20001),

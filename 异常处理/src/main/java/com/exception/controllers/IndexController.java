@@ -8,12 +8,16 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class IndexController {
+
     @RequestMapping("/")
     public  String index(){
         return  "index";
     }
     @RequestMapping("/test")
     public String test(){
-        throw  new CustomizeException( ErrorList.PASSWORD_ERROR.getMessage(),ErrorList.USERNAME_ERROR.getCode());
+        if (true){
+            throw  new CustomizeException( ErrorList.PASSWORD_ERROR.getMessage(),ErrorList.USERNAME_ERROR.getCode(),"error");
+        }
+        return  "index";
     }
 }
