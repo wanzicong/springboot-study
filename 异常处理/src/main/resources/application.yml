@@ -9,3 +9,4 @@ spring:
   jpa:
     database: mysql
     show-sql: true
+debug: true

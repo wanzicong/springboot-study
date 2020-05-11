@@ -16,7 +16,8 @@ public class IndexController {
     @RequestMapping("/test")
     public String test(){
         if (true){
-            throw  new CustomizeException( ErrorList.PASSWORD_ERROR.getMessage(),ErrorList.USERNAME_ERROR.getCode(),"error");
+            throw  new CustomizeException( ErrorList.PASSWORD_ERROR.getMessage(),
+                    ErrorList.USERNAME_ERROR.getCode(),"error");
         }
         return  "index";
     }
