@@ -29,13 +29,11 @@ public class JwtInterceptor extends HandlerInterceptorAdapter {
             try {
                 claims = jwtUtil.parseJWT(token);
             } catch (Exception e) {
-                System.out.println("异常信息");
-                e.printStackTrace();
+                throw  new RuntimeException("令牌不正确");
             }
             if (null != claims) {
                 /*判断令牌中的自定义载荷中的角色是否是admin（管理员）*/
                 if ("admin".equals(claims.get("roles"))) {
-                    System.out.println("管理员登录");
                     request.setAttribute("admin_claims", claims);
                 }
                 /*判断令牌中的自定义载荷中的角色是否是user（普通用户）*/
