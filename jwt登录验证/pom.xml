@@ -19,11 +19,12 @@
     </properties>
 
     <dependencies>
+
+        <!--网页的访问 mvc-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
 
         <!--安全框架-->
         <dependency>
