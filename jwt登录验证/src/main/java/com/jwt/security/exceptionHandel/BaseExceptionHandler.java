@@ -9,8 +9,6 @@ public class BaseExceptionHandler {
     /* 默认处理所有异常*/
     @ExceptionHandler
     public void error(Throwable e) {
-
-
         /*处理为登录的操作*/
         if (e instanceof  MyException){
             String code = ((MyException) e).getCode();
@@ -19,9 +17,5 @@ public class BaseExceptionHandler {
                 System.out.println("你他妈的还没有登录");
             }
         }
-
-
-
-
     }
 }
