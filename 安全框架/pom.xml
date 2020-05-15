@@ -19,11 +19,7 @@
     </properties>
 
     <dependencies>
-        <!--操作数据库-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
+
         <!--安全框架-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -34,12 +30,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <!--连接数据库-->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <scope>runtime</scope>
-        </dependency>
+
         <!--单元测试-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -52,6 +43,13 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
+        <!--引入thymeleaf 模板-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
         <!--安全框架单元测试-->
         <dependency>
             <groupId>org.springframework.security</groupId>
@@ -65,6 +63,8 @@
             <artifactId>thymeleaf-extras-springsecurity5</artifactId>
         </dependency>
     </dependencies>
+
+
 
     <build>
         <plugins>
