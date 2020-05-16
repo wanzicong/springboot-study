@@ -15,7 +15,7 @@ public class People {
 
 
     public  enum Role{
-        admin,normal
+        vip1,vip2,vip3
     }
     public long getUid() {
         return uid;
