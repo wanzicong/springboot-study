@@ -1,14 +1,18 @@
 package com.security.config;
 
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
-public class MyUserDetailService  implements UserDetailsService {
+import java.util.ArrayList;
+import java.util.List;
 
-    /*根据名字获取用户的权限和角色*/
+public class MyUserService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
+        List<GrantedAuthority> authorityLists = new ArrayList<GrantedAuthority>();
+
         return null;
     }
 }
