@@ -36,7 +36,6 @@
                         </ul>
                 </div>
 
-
                 <div sec:authorize="hasRole('vip2')">
                         <h3>高级武功秘籍</h3>
                         <ul>
@@ -47,8 +46,8 @@
                 </div>
 
 
-                <!--<div sec:authorize="hasRole('vip3')">-->
-                <div>
+                <div sec:authorize="hasRole('vip3')">
+                <!--<div>-->
                         <h3>绝世武功秘籍</h3>
                         <ul>
                                 <li><a th:href="@{/level3/1}">葵花宝典</a></li>
